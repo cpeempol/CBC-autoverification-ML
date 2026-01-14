@@ -116,6 +116,20 @@ In addition to analyzer-generated fields, the following variables are required a
 
 These variables are mandatory inputs for all machine learning models in this repository.
 
+## Outcome Variable (Final Decision)
+
+The final decision used for model training and evaluation is stored in the variable **`anyflag`**.
+
+This variable represents the autoverification outcome and is defined as follows:
+
+- **`anyflag = 0`** : *Verifiable*  
+  - The CBC result is eligible for autoverification without manual review.
+
+- **`anyflag = 1`** : *Non-verifiable*  
+  - The CBC result requires manual review, verification, or additional action.
+
+The **`anyflag`** variable serves as the ground-truth label for all machine learning models in this repository and reflects the final verification decision within the laboratory workflow.
+
 
 ## Reproducibility Note
 
